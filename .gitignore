@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+/Heartbeat Runner/[Ll]ibrary/
+/Heartbeat Runner/[Tt]emp/
+/Heartbeat Runner/[Oo]bj/
+/Heartbeat Runner/[Bb]uild/
+/Heartbeat Runner/[Bb]uilds/
+/Heartbeat Runner/[Ll]ogs/
+/Heartbeat Runner/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
