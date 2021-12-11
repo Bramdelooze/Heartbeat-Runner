@@ -5,16 +5,20 @@ using UnityEngine;
 public class AnimationSpeedController : MonoBehaviour
 {
     private Animator animator;
+    private DistanceToDesk distanceToDesk;
+    public int speedLevel = 1;
+    public int maxSpeed = 4;
     // Start is called before the first frame update
-    void Awake()
+    void OnEnable()
     {
         animator = GetComponent<Animator>();
+        distanceToDesk = FindObjectOfType<DistanceToDesk>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeSpeed()
     {
         //If the player taps the heart x time the animator speed goes up a level, if the player misses it goes down a level
-        //animator.speed += Time.deltaTime / 10;
+        animator.speed = (float)speedLevel;
+        distanceToDesk.ChangeSubtractSpeed(speedLevel);
     }
 }

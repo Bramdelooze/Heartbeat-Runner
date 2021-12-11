@@ -318,6 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0a8991bd5941043ac328f45805b55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedLevel: 1
+  maxSpeed: 4
 --- !u!1001 &3426276919797111693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426276921434382172, guid: 4cfc8d65bce61784ba866e8221bd2a82,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cfc8d65bce61784ba866e8221bd2a82, type: 3}

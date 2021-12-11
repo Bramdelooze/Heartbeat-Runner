@@ -18,12 +18,14 @@ public class HeartClick : MonoBehaviour
 
     [SerializeField] private ParticleSystem particles;
 
+    public AnimationSpeedController animSpeedController;
 
-    private void Awake()
+    private void OnEnable()
     {
         heart = this.GetComponent<Image>();
         if (scoreScript == null) scoreScript = FindObjectOfType<Score>();
         timerTime = timeToClick;
+        animSpeedController = FindObjectOfType<AnimationSpeedController>();
     }
 
     // Update is called once per frame
@@ -41,7 +43,19 @@ public class HeartClick : MonoBehaviour
                 {
                     scoreScript.ChangeScore(clickPoints);
                     SpawnParticles();
+                    if (animSpeedController.speedLevel < animSpeedController.maxSpeed)
+                    {
+                        animSpeedController.speedLevel++;
+                        animSpeedController.ChangeSpeed();
+                    }
+
                 }
+                else if (animSpeedController.speedLevel > 1)
+                {
+                    animSpeedController.speedLevel--;
+                    animSpeedController.ChangeSpeed();
+                }
+
                 isHeartFull = false;
                 heart.fillAmount = 0;
                 timerTime = timeToClick;

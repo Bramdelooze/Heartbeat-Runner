@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimerScript : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class TimerScript : MonoBehaviour
         if(timerTime >= 0)
         {
             timerTime -= Time.deltaTime;
+        }
+        else
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 }

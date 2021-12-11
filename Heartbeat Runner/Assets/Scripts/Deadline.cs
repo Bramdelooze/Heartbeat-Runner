@@ -20,7 +20,8 @@ public class Deadline : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Sit scene")
         {
-            DeadlineBar.fillAmount += Time.deltaTime * DeadlineFillSpeed / 100;
+            if (DeadlineBar.fillAmount < 1) DeadlineBar.fillAmount += Time.deltaTime * DeadlineFillSpeed / 100;
+            else SceneManager.LoadScene("Game Over");
         }
     }
 }

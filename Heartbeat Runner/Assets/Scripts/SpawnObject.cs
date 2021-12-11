@@ -6,9 +6,9 @@ public class SpawnObject : MonoBehaviour
 {
     [SerializeField] private GameObject[] spawnableObject;
     [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private float particleMoveSpeed = 1;
-    [SerializeField] private float waitBeforeSpawnSpeed = .8f;
-    [SerializeField] private int badCellSpawnRate = 1;
+    public float particleMoveSpeed = 1;
+    public float waitBeforeSpawnSpeed = .8f;
+    public int badCellSpawnRate = 1;
 
 
     private void Start()
@@ -53,5 +53,11 @@ public class SpawnObject : MonoBehaviour
     int RandomNumber(int min, int max)
     {
         return Random.Range(min, max);
+    }
+
+    public void ChangeWaveValues(float PMS, int BCSR)
+    {
+        particleMoveSpeed = PMS;
+        badCellSpawnRate = BCSR;
     }
 }

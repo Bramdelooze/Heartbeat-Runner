@@ -9,7 +9,7 @@ public class LoadSceneOnButtonPress : MonoBehaviour
     void Update()
     {
         if (GetInput())
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     bool GetInput()
@@ -18,5 +18,15 @@ public class LoadSceneOnButtonPress : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }

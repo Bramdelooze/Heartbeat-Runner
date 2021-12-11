@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class DontDestroy : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Game Over") UndoDontDestroy();
+    }
+
     //Singleton pattern to remove duplicates of this script
     private void RemoveDuplicates()
     {
@@ -18,5 +24,10 @@ public class DontDestroy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void UndoDontDestroy()
+    {
+        SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
     }
 }
