@@ -130,10 +130,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393518667}
+  - component: {fileID: 393518670}
   - component: {fileID: 393518669}
   - component: {fileID: 393518668}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Gezondheidsbeoordelingstext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,11 +152,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2059319045}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 180}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -360}
   m_SizeDelta: {x: 744.4949, y: 115.72937}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393518668
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: De gezondheid van je karakter wordt beoordeeld met x/x punten
+  m_text: 'De gezondheid van je karakter is: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -254,6 +255,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393518666}
   m_CullTransparentMesh: 0
+--- !u!114 &393518670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393518666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9f8c07d48af3b4b9aee1e6b55cddd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &769986423
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,9 +299,9 @@ RectTransform:
   m_Father: {fileID: 2059319045}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 464}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -76}
   m_SizeDelta: {x: 437.7556, y: 67.37146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769986425
@@ -690,11 +703,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2059319045}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70}
+  m_AnchoredPosition: {x: 0, y: -33}
   m_SizeDelta: {x: 1365.1772, y: 202.35522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116146682
@@ -716,13 +729,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tip: Wanneer je langdurig achter elkaar zit, komen er steeds meer slechte
-    stoffen in je lichaam. Dit betekent dat het tijd is om even op te staan en een
-    stukje te lopen.
+  m_text: 'Tip: Wanneer je langdurig achter elkaar zit, hopen er steeds meer slechte
+    stoffen op in je lichaam. Dit betekent dat het tijd is om even op te staan en
+    een stukje te lopen.
 
 
-    Wanneer je dit niet doet, hopen de slechte stoffen op
-    en loop je een verhoogd risico op vroegtijdige sterfte door onder andere hart-
+    Wanneer je dit niet doet, hopen de slechte stoffen
+    op en loop je een verhoogd risico op vroegtijdige sterfte door onder andere hart-
     en vaatziekten'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -920,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 655, y: 332.05}
-  m_SizeDelta: {x: 301.06885, y: 188.37665}
+  m_AnchoredPosition: {x: 0, y: -435}
+  m_SizeDelta: {x: 301.06885, y: 74.20352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739686196
 MonoBehaviour:
@@ -1036,9 +1049,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1889087002}
   - component: {fileID: 1889087004}
+  - component: {fileID: 1889087005}
   - component: {fileID: 1889087003}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Eindscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,11 +1070,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2059319045}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 333}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -207}
   m_SizeDelta: {x: 437.7556, y: 65.58191}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889087003
@@ -1082,7 +1096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Eindscore: xxxx'
+  m_text: 'Eindscore: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1159,6 +1173,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889087001}
   m_CullTransparentMesh: 0
+--- !u!114 &1889087005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889087001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f90a6057d62b4eb88cbb67df67904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2059319041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,9 +1277,9 @@ RectTransform:
   m_Children:
   - {fileID: 805551193}
   - {fileID: 769986424}
+  - {fileID: 1889087002}
   - {fileID: 393518667}
   - {fileID: 1116146681}
-  - {fileID: 1889087002}
   - {fileID: 1739686195}
   m_Father: {fileID: 0}
   m_RootOrder: 1

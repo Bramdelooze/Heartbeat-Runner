@@ -6,7 +6,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     private TMP_Text text;
-    private float score;
+    private float score = 0;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,5 +22,10 @@ public class Score : MonoBehaviour
     public void ChangeScore(float value)
     {
         score += value;
+    }
+
+    public float GetScore()
+    {
+        return score;
     }
 }
